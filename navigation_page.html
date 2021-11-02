@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 网站导航 </title>
+</head>
+
+<style type="text/css">
+    body, div, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        max-width: 1376px;
+        /*比起一个 width 钉死，使用 max-width 将会限制展示页面的最大宽度同时确保宽度随窗口变化而适应。*/
+
+        margin: 0 auto 0;
+    }
+
+    .nav-row {
+        /*margin-top: 15px;*/
+        height: 120px;
+    }
+
+    /*.nav-item {*/
+    /*    float: left;*/
+
+    /*    width: 330px;*/
+    /*    height: 120px;*/
+
+    /*    border: 2px #939799 solid;*/
+    /*    border-radius: 8px;*/
+
+    /*    width: 334px;*/
+    /*    height: 124px;*/
+
+    /*    margin-left: 5px;*/
+    /*    margin-right: 5px;*/
+
+    /*    background-color: #F5FCFF;*/
+    /*}*/
+
+    .nav-item {
+        float: left;
+
+        width: 334px;
+        height: 124px;
+
+        margin-top: 15px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        color: #DFE5E8;
+        background-color: #333333;
+
+        /*难算吧？痛苦吧？😄那就对辣，有一个属性你不知道，所以你才这么痛苦*/
+        /*box-sizing: border-box;*/
+        /*有了这条属性的话，你就随便写了，尺寸完全按照你的 width height 来定，padding 和 border 都会自动适应*/
+        /*不过 margin 似乎是不行的。*/
+    }
+
+    .nav-item-content {
+        width: 320px;
+        height: 110px;
+
+        margin: 5px;
+    }
+
+    .nav-item-content-icon-img, .nav-item-content-info {
+        float: left;
+
+        height: 100px;
+
+        margin: 5px;
+    }
+
+    .nav-item-content-icon-img {
+        width: 100px;
+
+        color: #333333;
+        background-color: #DFE5E8;
+
+        font-size: 80px;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    .nav-item-content-info {
+        width: 200px;
+    }
+
+    .nav-item-content-info div {
+        width: 200px;
+
+        font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei", "微软雅黑", STXiHei,sans-serif;
+    }
+
+    .nav-item-content-info-title {
+        height: 20px;
+
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .nav-item-content-info-detail {
+        height: 95px;
+
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+</style>
+
+<body>
+
+<div class="main">
+
+    <div class="header"></div>
+
+    <div class="navigation-contents">
+        <div class="nav-row">
+
+            <div class="nav-item" title="L.I.M.S.">
+                <div class="nav-item-content">
+                    <div class="nav-item-content-icon-img">L</div>
+                    <div class="nav-item-content-info">
+                        <div class="nav-item-content-info-title"> L.I.M.S. </div>
+                        <div class="nav-item-content-info-detail">
+                            <p> 实验室信息管理系统 (Laboratory Information Management System) </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item" title="新希望 OA">
+                <div class="nav-item-content">
+                    <div class="nav-item-content-icon-img">O</div>
+                    <div class="nav-item-content-info">
+                        <div class="nav-item-content-info-title"> Office Automation </div>
+                        <div class="nav-item-content-info-detail">
+                            <p> 办公自动化系统 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item" title="食品伙伴网">
+                <div class="nav-item-content">
+                    <div class="nav-item-content-icon-img">F</div>
+                    <div class="nav-item-content-info">
+                        <div class="nav-item-content-info-title"> foodmate.com </div>
+                        <div class="nav-item-content-info-detail">
+                            <p> 食品伙伴网：检测标准查询、下载 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

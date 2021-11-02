@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 聊天窗口 </title>
+
+    <style type="text/css">
+
+        body, div, ul, li, span, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #293134;
+        }
+
+        #main {
+            width: 960px;
+            margin: 0 auto 0;
+
+            background-color: #FCFCF2;
+        }
+
+        #top-status {
+            height: 22px;
+
+            background-color: #333333;
+        }
+
+        #status-list {
+            border-top: #222222 1px solid;
+            border-bottom: #222222 1px solid;
+
+            list-style: none;
+        }
+
+        #status-list li {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #ffffff;
+        }
+
+        #status-list .left-side-status {
+            float: left;
+        }
+
+        #status-list .right-side-status {
+            float: right;
+        }
+
+        #header {
+            height: 70px;
+
+            padding-top: 15px;
+
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-align: center;
+
+            color: #FFFFFF;
+            background-color: #53C2FF;
+        }
+
+        #header .room-title {
+            line-height: 50px;
+            font-size: 40px;
+        }
+
+        #header .room-status {
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        #dialogue {
+            height: fit-content;
+            padding-top: 20px;
+
+            background-color: #F7FEEF;
+        }
+
+        #dialogue .dialogue-line {
+            margin-bottom: 10px;
+        }
+
+        #dialogue .next-line {
+            clear: both;
+        }
+
+        #dialogue .left-bubble {
+            float: left;
+
+            width: fit-content;
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-right: 200px;
+            padding: 10px 15px 10px 20px;
+
+            background-color: #C3FEDC;
+        }
+
+        #dialogue .right-bubble {
+            float: right;
+
+            width: fit-content;
+            border-radius: 20px;
+            margin-left: 200px;
+            margin-right: 30px;
+            padding: 10px 20px 10px 15px;
+
+            background-color: #C3FEDC;
+        }
+
+        #dialogue .system-info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            line-height: 10px;
+
+            text-align: center;
+
+            color: #5669A6;
+        }
+
+        #footer {
+            height: 40px;
+            line-height: 40px;
+
+            background-color: #D5E6EB;
+        }
+
+        #footer ul {
+            list-style: none;
+
+            padding-left: 30px;
+        }
+
+        #footer ul li {
+            float: left;
+        }
+
+        #footer #input-zone #dialogue-input {
+            width: 700px;
+
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="main">
+    <div id="top-status">
+        <ul id="status-list">
+            <li class="left-side-status"> 内部聊天室 </li>
+            <li class="left-side-status"> 登陆状态：在线 </li>
+            <li class="right-side-status"> 9 月 13 日 10:29 </li>
+            <li class="right-side-status"> 服务器：正常 </li>
+        </ul>
+    </div>
+    <div id="header">
+        <p class="room-title"> Merveille Scope - 天命议会 </p>
+        <p class="room-status"> 40/50 人在线 </p>
+    </div>
+    <div id="dialogue">
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 有没有人？ </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="right-bubble">
+                <p> 宫哥二号机：有的有的 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="right-bubble">
+                <p>
+                    宫哥二号机：我要杀少爷
+                </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> 鸡儿炉石: ？ </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 杀 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> 鸡儿炉石：我想日批 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="system-info">
+                <p> 【系统信息】：警告，检测到少爷想日批，杀 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 欢迎体验专属订制迫害系统 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 目前支持基于关键字匹配的精确制导打击 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 只要系统检测到特定关键字，系统就会精确打击到人 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="right-bubble">
+                <p>
+                    宫哥二号机：杀guro佬？！
+                </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="system-info">
+                <p> 【系统警告】：检测到guro佬，杀！🔪 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 更任性的订制，更精确的迫害 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="right-bubble">
+                <p>
+                    宫哥二号机：我想日批
+                </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="system-info">
+                <p> 【系统信息】：警告，检测到少爷想日批，杀 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="right-bubble">
+                <p>
+                    宫哥二号机：哈哈，这就是精确打击🐎？
+                </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="left-bubble">
+                <p> Emasik: 因为关键词就是直接找"我想日批"这四个字 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div class="dialogue-line">
+            <div class="system-info">
+                <p> 【系统信息】：警告，检测到少爷想日批，杀 </p>
+            </div>
+            <div class="next-line"></div>
+        </div>
+
+        <div id="footer">
+            <form>
+                <ul>
+                    <li id="indicator"> 宫哥二号机： </li>
+                    <li id="input-zone"> <input id="dialogue-input" type="text" name="speak" placeholder="在这里输入...">  </li>
+                    <li id="send"> <input type="submit" value="发送"> </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

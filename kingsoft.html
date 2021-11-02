@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        body, div, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .nav-item {
+            float: left;
+
+            width: 334px;
+            height: 124px;
+
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            color: #DFE5E8;
+            background-color: #333333;
+
+            /*难算吧？痛苦吧？😄那就对辣，有一个属性你不知道，所以你才这么痛苦*/
+            /*box-sizing: border-box;*/
+            /*有了这条属性的话，你就随便写了，尺寸完全按照你的 width height 来定，padding 和 border 都会自动适应*/
+            /*不过 margin 似乎是不行的。*/
+        }
+
+        .nav-item-content {
+            width: 320px;
+            height: 110px;
+
+            margin: 5px;
+        }
+
+        .nav-item-content-icon-img, .nav-item-content-info {
+            float: left;
+
+            height: 100px;
+
+            margin: 5px;
+        }
+
+        .nav-item-content-icon-img {
+            width: 100px;
+
+            color: #333333;
+            background-color: #DFE5E8;
+
+            font-size: 80px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .nav-item-content-info {
+            width: 200px;
+        }
+
+        .nav-item-content-info div {
+            width: 200px;
+
+            font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei", "微软雅黑", STXiHei,sans-serif;
+        }
+
+        .nav-item-content-info-title {
+            height: 20px;
+
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .nav-item-content-info-detail {
+            height: 95px;
+
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        .item {
+            height: 124px;
+            width: 334px;
+
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            color: #DFE5E8;
+            background-color: #333333;
+
+            /*float: left;*/
+
+            /*width: 334px;*/
+            /*height: 124px;*/
+
+            /*margin-top: 15px;*/
+            /*margin-left: 5px;*/
+            /*margin-right: 5px;*/
+
+            /*color: #DFE5E8;*/
+            /*background-color: #333333;*/
+
+            /*!*难算吧？痛苦吧？😄那就对辣，有一个属性你不知道，所以你才这么痛苦*!*/
+            /*!*box-sizing: border-box;*!*/
+            /*!*有了这条属性的话，你就随便写了，尺寸完全按照你的 width height 来定，padding 和 border 都会自动适应*!*/
+            /*!*不过 margin 似乎是不行的。*!*/
+        }
+
+        .item-content {
+            width: 320px;
+            height: 110px;
+
+            margin: 5px;
+        }
+
+        .item-content-icon, .item-content-info {
+            float: left;
+
+            height: 100px;
+
+            margin: 5px;
+        }
+
+        .item-content-icon {
+            width: 100px;
+
+            color: #333333;
+            background-color: #DFE5E8;
+
+            line-height: 100px;
+            text-align: center;
+
+            font-size: 80px;
+        }
+
+        .item-content-info {
+            width: 200px;
+        }
+
+        .item-content-info-title {
+            height: 20px;
+
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .item-content-info-detail {
+            height: 80px;
+
+            font-size: 16px;
+            line-height: 20px;
+
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+
+        .msg {
+            width: 320px;
+
+            margin: 20px auto 0;
+
+            border-bottom: dimgray 2px solid;
+            border-right: dimgray 2px solid;
+        }
+
+        .msg-title {
+            background-color: blue;
+
+            height: 25px;
+        }
+
+        .msg-title-text {
+            float: left;
+            color: #FFFFFF;
+            line-height: 25px;
+        }
+
+        .msg-title-text span {
+            margin-left: 5px;
+        }
+
+        .msg-title-cross {
+            float: right;
+
+            width: 25px;
+
+            color: white;
+            background-color: red;
+
+            line-height: 25px;
+            text-align: center;
+        }
+
+        .msg-content {
+            background-color: lightgray;
+
+            height: 200px;
+        }
+
+        .msg-content-text {
+            margin: 0 auto 0;
+            padding: 40px;
+
+            width: 200px;
+
+            text-align: center;
+
+            line-height: 26px;
+        }
+
+        .msg-content-confirm {
+            width: 200px;
+
+            text-align: center;
+
+            margin: 0 auto 0;
+        }
+
+        .msg-content-confirm input {
+            background-color: lightgray;
+
+            border-bottom: dimgray 2px solid;
+            border-right: dimgray 2px solid;
+
+        }
+    </style>
+
+    <script type="text/javascript">
+        let i = 30;
+
+        function f() {
+            let countdown = document.getElementById("countdown");
+            let virus = document.getElementById('virus');
+            let emphasize = document.getElementById('emphasize');
+
+            i -= 1;
+
+            if (i === 0){window.location = "https://www.360.cn";}
+            else if (i > 15) {countdown.innerText = i;}
+            else if (15 >= i)
+            {
+                countdown.style.color = 'red';
+                countdown.style.fontSize = '30px'
+                countdown.innerText = i;
+                virus.style.color = 'red';
+                virus.style.fontSize = '30px'
+                emphasize.innerText = '!';
+                emphasize.style.color = 'red';
+                emphasize.style.fontSize = '30px'
+            }
+        }
+
+        setInterval(f, 1000);
+
+        function goTo360(url){
+            window.location = url;
+        }
+    </script>
+
+</head>
+<body>
+
+<div class="msg">
+    <div class="msg-title">
+        <div class="msg-title-text"> <span>哈哈</span> </div>
+        <div class="msg-title-cross"> X </div>
+    </div>
+    <div class="msg-content">
+        <div class="msg-content-text"> 您的计算机没有安装 360 安全卫士，它将会在
+            <span id="countdown"> 30 </span>
+            秒内使你感染
+            <span id="virus">梅毒</span>
+            <span id="emphasize">。</span>
+        </div>
+
+        <div class="msg-content-confirm">
+            <input type="button" value="现在安装！" onclick="goTo360('https://www.360.cn')"/>
+            <input type="button" value="安装金山毒霸！" onclick="goTo360('https://www.ijinshan.com')"/>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

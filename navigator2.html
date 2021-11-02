@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 导航 </title>
+
+    <style type="text/css">
+
+        .red-div {
+            height: 100px;
+            width: 100px;
+
+            background-color: #900;
+        }
+
+        .blue-div {
+            height: 100px;
+            width: 100px;
+
+            background-color: #009;
+        }
+
+        .green-div {
+            height: 100px;
+            width: 100px;
+
+            background-color: #090;
+        }
+
+        .red-span {
+            height: 100px;
+            width: 100px;
+
+            color: #FFFFFF;
+            background-color: black;
+        }
+
+        .horizontal-div {
+            background-color: whitesmoke;
+        }
+
+        .horizontal-div div {
+            float: left;
+        }
+
+        .purple-div {
+            height: 100px;
+            width: 100px;
+
+            background-color: #909;
+        }
+
+        .clear-div {
+            clear: both;
+        }
+
+
+        .box-div {
+            background-color: #990000;
+
+            height: 100px;
+            width: 100px;
+
+            border: 5px black solid;
+
+            margin: 20px;
+
+            padding: 10px;
+
+            line-height: 100px;
+        }
+
+        .small-box-div {
+            background-color: yellow;
+            height: 50px;
+            width: 50px;
+
+            margin: auto;
+        }
+
+        .main {
+            background-color: wheat;
+
+            width: 960px;
+            height: 40px;
+
+            margin: 20px auto;
+
+            text-align: center;
+            line-height: 40px;
+
+            color: #990000;
+            font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei", "微软雅黑", STXiHei, sans-serif;
+            font-size: 24px;
+
+            border: 2px blue dashed;
+            border-radius: 20px;
+        }
+
+        .item-content {
+            width: 320px;
+            height: 110px;
+
+            margin: 5px;
+        }
+
+        .item {
+            float: left;
+
+            background-color: #333333;
+
+            height: 124px;
+            width: 334px;
+
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            color: #DFE5E8;
+
+        }
+
+        .item-content-icon, .item-content-info {
+            /*background-color: #990000;*/
+
+            float: left;
+
+            height: 100px;
+
+            margin: 5px;
+        }
+
+        .item-content-icon {
+            width: 100px;
+
+            color: #333333;
+            background-color: #DFE5E8;
+
+            line-height: 100px;
+            text-align: center;
+
+            font-size: 80px;
+        }
+
+        .item-content-info {
+            width: 200px;
+        }
+
+        .item-content-info-title {
+            height: 20px;
+
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .item-content-info-detail {
+            height: 80px;
+
+            font-size: 16px;
+            line-height: 20px;
+
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="item">
+    <div class="item-content">
+        <div class="item-content-icon">L</div>
+        <div class="item-content-info">
+            <div class="item-content-info-title">Last of Us</div>
+            <div class="item-content-info-detail"> Enjoy the fucking politically correct bullshit </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div> 块状元素在行内排斥其他元素 </div>
+<span> span 是内联元素 </span>
+<span> 内联不会排斥同行内的其他元素 </span>
+<br />
+<span> 使用 br 标签可以实现强制换行 </span>
+
+<p> p 标签用于书写文本，它是____元素 </p>
+<p> 如果这一行被上一行排斥，则说明它是块状元素，否则是内联元素 </p>
+<p> 在 HTML 中，复数个空格        只会被处理为 1 个空格 </p>
+<p> 此外，所有的回行
+都会被认识为一个空格。 </p>
+<p> 你可以在一个标签中，<span> 嵌入另一个标签 </span> </p>
+
+<hr />
+
+<div class="horizontal-div">
+    <div class="red-div"></div>
+    <div class="blue-div"></div>
+    <div class="green-div"></div>
+</div>
+<div class="clear-div"></div>
+
+<div class="purple-div"></div>
+
+<hr />
+<h3> 盒子模型 </h3>
+
+<div class="box-div">
+    <div class="small-box-div"></div>
+</div>
+
+
+<hr />
+
+<h3> 制作一个 banner </h3>
+
+<div class="main">
+这是横幅
+</div>
+
+<hr />
+
+
+
+</body>
+</html>

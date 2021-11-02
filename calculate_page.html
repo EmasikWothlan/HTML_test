@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 计算页面 </title>
+    <style type="text/css">
+        body, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto 20px;
+            border: black 2px solid;
+        }
+
+        tbody td {
+            border-bottom: darkgrey 1px solid;
+            border-right: darkgrey 1px solid;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function calculate() {
+            let parameters = document.getElementsByClassName('parameters');
+
+            for (let i in parameters.length) {
+                console.log(parameters.item(i - 1));
+            }
+        }
+
+        window.onload = calculate;
+    </script>
+
+</head>
+<body>
+<div id="main">
+    <form>
+        <table id="params">
+            <thead>
+            <tr>
+                <td>参数名</td>
+                <td>参数值</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>m</td>
+                <td><input class="parameters" id="param-m" type="text" name="m" placeholder="m"></td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td><input class="parameters" id="param-a" type="text" name="a" placeholder="A"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+</html>
